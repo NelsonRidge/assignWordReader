@@ -1,5 +1,7 @@
 package assignment;
 
+import inlamning.WordReader;
+
 import java.util.Scanner;
 
 public class MainWordReader {
