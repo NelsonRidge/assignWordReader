@@ -26,14 +26,14 @@ public class TestWordReader {
     public void testLineCount() {
         //Arrange
         WordReader wordReader = new WordReader();       //Skapar ett WordReader-objekt
-        wordReader.setInput("Programmering");           //Sätter första raden
-        wordReader.setInput("är");                      //Sätter andra raden
-        wordReader.setInput("svårt!");                  //Sätter tredje raden
         int expected = 3;
 
         //Act
+        wordReader.setInput("Programmering");           //Sätter första raden
         wordReader.countLines();                        //Kallar på metoden som räknar rader
+        wordReader.setInput("är");                      //Sätter andra raden
         wordReader.countLines();
+        wordReader.setInput("svårt!");                  //Sätter tredje raden
         wordReader.countLines();
         int actual = wordReader.getLineCount();         //Kallar på metoden som hämtar faktiskt
                                                         //antal rader och tilldelar värdet till "actual"
@@ -45,14 +45,14 @@ public class TestWordReader {
     public void testBlankLineCount() {
         //Arrange
         WordReader wordReader = new WordReader();       //Skapar ett WordReader-objekt
-        wordReader.setInput("Programmering");           //Sätter första raden
-        wordReader.setInput("");                        //Sätter andra raden
-        wordReader.setInput("svårt!");                  //Sätter tredje raden
         int expected = 3;
 
         //Act
+        wordReader.setInput("Programmering");           //Sätter första raden
         wordReader.countLines();                        //Kallar på metoden som räknar rader
+        wordReader.setInput("");                        //Sätter andra raden
         wordReader.countLines();
+        wordReader.setInput("svårt!");                  //Sätter tredje raden
         wordReader.countLines();
         int actual = wordReader.getLineCount();         //Kallar på metoden som hämtar faktiskt
                                                         //antal rader och tilldelar värdet till "actual"
@@ -74,7 +74,5 @@ public class TestWordReader {
 
 
     }
-
-
 
 }
